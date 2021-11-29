@@ -1,10 +1,17 @@
 <?php
     interface Car
     {
+        const VERSION = '123';
         public function loaiXeDua();
+        
     }
 
-    class CarF1 implements Car
+    interface Car2 extends Car
+    {
+        public function abcd();
+    }
+
+    class CarF1 implements Car2
     {
         public $name; //Ten
         public $numWheel; //So banh xe
@@ -19,6 +26,8 @@
         {
             echo "Xe nay co the dua duoc";
         }
+
+        
     }
 
     $carF1 = new CarF1("F1 car", 5);

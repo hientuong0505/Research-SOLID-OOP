@@ -1,32 +1,44 @@
 <?php
-    interface DiSanBat
+    interface Animal
     {
-        public function sanBat();
+        public function eat();
+        public function sleep();
     }
 
-    interface SuaGauGau
+    interface FlyAnimal
     {
-        public function gauGau();
+        public function fly();
     }
 
-    class ChoSanBat implements DiSanBat, SuaGauGau
+    interface SwimAnimal
     {
-        public function sanBat()
-        {
-            echo "Loai cho nay co the di san";
-        }
-
-        public function gauGau()
-        {
-            echo "Loai cho nay co the sua gau gau";
-        }
+        public function swim();
     }
 
-    class ChoGiuNha implements SuaGauGau
+    class EagleBird implements Animal, FlyAnimal
     {
-        public function gauGau()
+        public function eat() {}
+        public function sleep() {}
+        public function fly() 
         {
-            echo "Loai cho nay co the sua gau gau";
+            echo "Chim ưng có thể bay trên bầu trời";
         }
     }
+
+    class catFish implements Animal, SwimAnimal
+    {
+        public function eat() {}
+        public function sleep() {}
+        public function swim() 
+        {
+            echo "Cá trê có thể bơi";
+        }
+    }
+
+    $eagleBird = new EagleBird();
+    $catFish = new CatFish();
+
+    echo $eagleBird->fly();
+    echo "<br>********<br>";
+    echo $catFish->swim();
 ?>

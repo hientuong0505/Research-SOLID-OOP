@@ -1,5 +1,5 @@
 <?php
-    class Animal
+    class Animal1
     {
         public function eat()
         {
@@ -7,7 +7,7 @@
         }
     }
 
-    class Lion extends Animal
+    class Lion extends Animal1
     {
         public function eat()
         {
